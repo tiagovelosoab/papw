@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./abrefecha.component.css']
 })
 export class AbrefechaComponent implements OnInit {
-  public imagem='https://br.pinterest.com/pin/641270434419679009/'
-  public exibe=false;
+  public imagem='assets/img/vai_pro_linkedin.jpg'
+  public exibe=true;
   public descricao='Disciplinas de programação';
   public usuario='Rodrigo Fujioka';
   public profissao='Professor';
@@ -15,13 +15,11 @@ export class AbrefechaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public aparece(){
-
-  }
-  public desaparece(){
-    
-  }
+ 
   public exibirPerfil(){
-    this.exibe=!this.exibe;
+    this.exibe=true;
+  }
+  public ocultaPerfil(){
+    this.exibe=false;
   }
 }
