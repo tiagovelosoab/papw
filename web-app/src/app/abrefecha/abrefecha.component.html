@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<body>
-
 <div class="w3-container">
-  <h2>Post</h2>
+  <h2 text-align:center>Post</h2>
 
-  <div class="w3-card-4 w3-dark-grey" style="width:50%" >
+  <div class="w3-card-4 w3-dark-grey" style="width: 50%"  >
     <div class="w3-container w3-center">
       <div *ngIf="exibe">
       <h3>Museum</h3>
       <img [src]="imagem" alt="Avatar" style="width:80%">
       <h5>Tiago Veloso</h5>
+      <div *ngFor="let certification of lista">
+        <div class="alert alert-primary" role="alert">
+          {{certification.cert}}
+        </div>
+      </div>
     </div>
       <div class="w3-section">
         <button class="w3-button w3-green" (click)="exibirPerfil()">Aparece</button>
@@ -23,6 +21,5 @@
   </div>
 </div>
 
-</body>
-</html>
+
 

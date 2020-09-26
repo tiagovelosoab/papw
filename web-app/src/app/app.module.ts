@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ContadorComponent } from './contador/contador.component';
 import { AbrefechaComponent } from './abrefecha/abrefecha.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RodapeComponent,
     ContadorComponent,
-    AbrefechaComponent
+    AbrefechaComponent,
+    DiretivasComponent
   ],
   imports: [
     BrowserModule

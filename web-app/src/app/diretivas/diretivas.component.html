@@ -1,0 +1,23 @@
+<div *ngFor="let car of carros" [ngSwitch]="car.color">
+
+    <div *ngSwitchCase="'blue'" class="alert alert-primary" >
+      {{ car.age }} - {{ car.name }} ({{ car.color }})
+    </div>
+
+    <div *ngSwitchCase="'yellow'" class="alert alert-warning">
+      {{ car.age }} - {{ car.name }} ({{ car.color }})
+    </div>
+
+    <div *ngSwitchCase="'silver'" class="alert alert-dark">
+      {{ car.age }} - {{ car.name }} ({{ car.color }})
+    </div>
+
+    <div *ngSwitchCase="'red'" class="alert alert-danger">
+      {{ car.age }} - {{ car.name }} ({{ car.color }})
+    </div>
+
+    <div *ngSwitchDefault class="alert alert-success">
+      {{ car.age }} - {{ car.name }} ({{ car.color }})
+    </div>
+
+  </div>
