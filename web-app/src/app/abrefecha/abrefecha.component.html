@@ -1,7 +1,7 @@
 <div class="w3-container">
-  <h2 text-align:center>Post</h2>
+  <h2 style="text-align:center">Post</h2>
 
-  <div class="w3-card-4 w3-dark-grey" style="width: 50%"  >
+  <div class="w3-card-4 w3-dark-grey" style="width: 100%"  >
     <div class="w3-container w3-center">
       <div *ngIf="exibe">
       <h3>Museum</h3>
@@ -9,7 +9,7 @@
       <h5>Tiago Veloso</h5>
       <div *ngFor="let certification of lista">
         <div class="alert alert-primary" role="alert">
-          {{certification.cert}}
+          {{certification.id}}:{{certification.cert}}({{certification.year}})
         </div>
       </div>
     </div>

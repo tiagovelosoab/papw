@@ -33,6 +33,23 @@ export class DiretivasComponent implements OnInit {
       "color": 'green'
     }
   ];
+  pessoas:any[]=[
+    {
+      id:1,
+      nome:'Tiago',
+      sal:5000
+    },
+    {
+      id:2,
+      nome:'José',
+      sal:3000
+    },
+    {
+      id:3,
+      nome:'Maria',
+      sal:10000
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {

@@ -19,5 +19,16 @@
     <div *ngSwitchDefault class="alert alert-success">
       {{ car.age }} - {{ car.name }} ({{ car.color }})
     </div>
-
+</div>
+<br>
+<div *ngFor="let i of pessoas">
+  <div *ngIf="i.sal<=5000;else outro">
+    {{i.id}}:{{i.nome}} salário:{{i.sal}} classificação:Pobre
   </div>
+  <ng-template #outro>
+    {{i.id}}:{{i.nome}} salário:{{i.sal}} classificação:Rico
+  </ng-template>
+
+ </div>
+
+  
