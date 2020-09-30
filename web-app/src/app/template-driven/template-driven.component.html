@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" ngModel required>
+    </div>
+    <div>
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" ngModel required>
+    </div>
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" ngModel required>
+    <div>
+    <button type="text" [disabled]="f.form.invalid">Enviar</button>
+    </div>
+</form>

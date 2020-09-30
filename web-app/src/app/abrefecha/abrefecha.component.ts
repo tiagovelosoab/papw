@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbrefechaComponent implements OnInit {
   public imagem='assets/img/vai_pro_linkedin.jpg'
-  public exibe=true;
+  public exibe=false;
   public descricao='Disciplinas de programação';
   public usuario='Rodrigo Fujioka';
   public profissao='Professor';
