@@ -8,6 +8,7 @@ import { ContadorComponent } from './contador/contador.component';
 import { AbrefechaComponent } from './abrefecha/abrefecha.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
     ContadorComponent,
     AbrefechaComponent,
     DiretivasComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,

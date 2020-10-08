@@ -15,7 +15,7 @@ export class TemplateDrivenComponent implements OnInit {
   onSubmit(form:NgForm){
     let dados=`
       Nome:${form.value.nome}
-      Telefone:${form.value.telefone2}
+      Telefone:${form.value.telefone}
       Endereço:${form.value.endereco}
     `;
     console.log(dados);

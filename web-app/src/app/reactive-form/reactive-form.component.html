@@ -1,0 +1,24 @@
+<form [formGroup]='formCadastro' (ngSubmit)='enviar()'>
+    <div>
+        Nome:<input type="text" id="nome" name="nome" formControlName="nome"/> 
+    </div>
+    <div>
+        Email:<input type="email" id="email" name="email" formControlName="email"/> 
+    </div>
+    <div>
+        Telefone:<input type="number" id="telefone" name="telefone" formControlName="telefone"/> 
+    </div>
+    <div>
+        CPF:<input type="text" formControlName="cpf"/> 
+    </div>
+    <div>
+        idade:<input type="number" formControlName="idade"/> 
+    </div>
+    <div>
+        senha:<input type="text" formControlName="senha"/> 
+    </div>
+    <div>
+        Confirmar senha:<input type="text" formControlName="confirma_senha"/> 
+    </div>
+    <button type="submit" [disabled]="formCadastro.invalid">Enviar</button>
+</form>
