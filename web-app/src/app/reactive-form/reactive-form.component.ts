@@ -38,6 +38,7 @@ export class ReactiveFormComponent implements OnInit {
        ])),
       'confirma_senha':new FormControl(null,Validators.compose([
         Validators.required,
+        Validators.minLength(8)
       ])) 
       
     });
@@ -47,6 +48,7 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   enviar(){
+    if(this.formCadastro.value.senha===this.formCadastro.value.confirma_senha){
     let dados = `
     nome: ${this.formCadastro.value.nome}
     email: ${this.formCadastro.value.email}
@@ -56,16 +58,19 @@ export class ReactiveFormComponent implements OnInit {
     senha:${this.formCadastro.value.senha}          
   `;
    console.log(dados);
+    }
+   else{
+     window.alert("Error:Passwords mismatch\nPlease try again");
+   } 
   };
  maior(control:AbstractControl): {[key:string]:any}|null{
    if(control.value>=18){
      return null;
    }  
    else{
-    return{'idade':false}
+    return{'idade':true}
     }  
    }
-  
  }
  
   
