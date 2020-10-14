@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Sexo:<select id="select">
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+    </select><br>
+    Idade:<input id="idade" type="number"><br>
+    <button onclick="resultado(document.getElementById('select').value,parseInt(document.getElementById('idade').value))">Ver resultado</button>
+    <script>
+        function resultado(sexo,idade){
+            if(sexo==="M"&&idade>=18){
+                window.alert("pode entrar no bar com taxa");
+            }
+            else if(sexo==="F"&&idade>=18){
+                window.alert("pode entrar no bar sem taxa");
+            }
+            else if(idade<18){
+                window.alert("não pode entrar no bar");
+            }
+            
+        }
+    </script>
+</body>
+</html>
