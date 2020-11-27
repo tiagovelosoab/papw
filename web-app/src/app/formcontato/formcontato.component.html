@@ -1,0 +1,50 @@
+<form (ngSubmit)="saveContato(f)" #f="ngForm">
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" [(ngModel)]="contato.name" id="name" name="name" #name="ngModel" required class="form-control"  
+        placeholder="Digite a Nome"  [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" >
+
+    </div>
+    <div>
+        <label for="accountNumber">AccountNumber:</label>
+        <input type="text" [(ngModel)]="contato.accountNumber" id="accountNumber" name="accountNumber" #accountNumber="ngModel" required class="form-control"  >
+       
+    </div>
+    <div>
+        <button type="submit" [disabled]="f.form.invalid">Cadastrar</button>
+    </div>
+</form>
+<div class="container">
+
+
+    <button class="btn btn-warning btn-sm ml-1" (click)="getContatos()" type="button">Listar Todos</button>
+
+    <div class="card-body">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">nome</th>
+              <th scope="col">Número da conta</th>                
+        
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let contato of contatos">
+              <td>{{contato.id}}</td>
+              <td>{{contato.name}}</td>
+              <td>{{contato.accountNumber}}</td>
+              
+             
+              <!--
+              <td>
+                <button type="button" class="btn btn-warning btn-sm"  routerLink="/agenda-update/{{agenda.id}}" routerLinkActive="active">Editar</button>                  
+                <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deleteAgenda(agenda)">Deletar</button>                  
+              </td>
+              -->
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>

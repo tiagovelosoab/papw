@@ -9,6 +9,8 @@ import { AbrefechaComponent } from './abrefecha/abrefecha.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FormcontatoComponent } from './formcontato/formcontato.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     AbrefechaComponent,
     DiretivasComponent,
     TemplateDrivenComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    FormcontatoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
